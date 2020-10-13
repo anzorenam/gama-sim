@@ -8,6 +8,12 @@ import seaborn as sns
 import scipy.stats as stat
 import os
 
+sns.set(rc={"figure.figsize":(8,4)})
+sns.set_context('paper',font_scale=1.5,rc={'lines.linewidth':1.5})
+sns.set_style('ticks')
+plt.rc('text',usetex=True)
+plt.rc('text.latex',preamble=r'\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage[spanish]{babel} \usepackage{amsmath,amsfonts,amssymb} \usepackage{siunitx}')
+
 home=os.environ['HOME']
 edir=['0.2GeV','0.5GeV','1GeV','2GeV','5GeV','10GeV']
 dir='{0}/Descargas/gamma-event/gamma-sim/photons'.format(home)
